@@ -1,0 +1,27 @@
+ Is there a root? If not, root = value.
+ if there is a root. Is value greater than or less than root?
+ if less than is there a left node?
+  if there is no left node, left node = value
+ if greater than is there a right node?
+  if there is no right node, right node = value
+
+If there is a left node, go to left node
+  is value greater than or less than node
+    if greater than is there a right node
+    if less than is there a left node
+
+if there is a right node, go to right node
+....
+
+
+How to look up
+is there a root node
+Yes - does value = root? No - returns false
+if value does not = root
+is value greater than or less than root
+if greater than is there right node
+  if not, false
+  else go to right node, repeat
+if less than, is there left node
+  if not, false
+  else go to left node, repeat
