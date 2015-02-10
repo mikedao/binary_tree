@@ -14,13 +14,22 @@ class Node
   def insert(value)
     if self.data.nil?
       self.data = value
-      return
-    elsif value > self.data
-      @right_node = Node.new(value)
-    else
-      @left_node = Node.new(value)
+    elsif value > self.data && self.right_node.nil?
+      self.right_node = Node.new(value)
+    elsif value < self.data && self.left_node.nil?
+      self.left_node = Node.new(value)
+    elsif value > self.data && self.right_node
+      self.right_node.insert(value)
+    elsif value < self.data && self.left_node
+      self.left_node.insert(value)
     end
   end
+
+  def find(value)
+    if self.data == value || self.right_node.data == value || self.left_node.data == value
+      return true
+    elsif
+    end
 
 end
 
